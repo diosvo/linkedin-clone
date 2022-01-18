@@ -1,0 +1,12 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "linkedin",
+  "bundledWebRuntime": false,
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
