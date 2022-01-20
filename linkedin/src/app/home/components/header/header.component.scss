@@ -1,0 +1,38 @@
+$-icon      : 24px;
+$-item-width: 34px;
+
+.wrapper {
+  display  : flex;
+  margin   : auto;
+  max-width: 1128px;
+
+  ion-buttons {
+    ion-button ion-icon {
+      font-size: $-item-width;
+    }
+
+    ion-searchbar {
+      --box-shadow: none;
+    }
+  }
+
+  ion-grid {
+    display        : flex;
+    justify-content: flex-end;
+
+    ion-col {
+      width     : 80px !important;
+      text-align: center;
+      align-self: center;
+
+      ion-icon {
+        font-size: $-icon;
+      }
+
+      ion-avatar {
+        width : $-icon;
+        height: $-icon;
+      }
+    }
+  }
+}
