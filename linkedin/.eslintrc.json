@@ -1,17 +1,11 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json"
-        ],
+        "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
@@ -23,27 +17,40 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
+            "style": "kebab-case"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
           {
             "type": "element",
-            "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "eqeqeq": ["error", "smart"],
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "dot-notation": "off",
+        "id-blacklist": "off",
+        "id-match": "off",
+        "no-empty-function": "off",
+        "no-magic-numbers": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-expressions": [
+          "error",
+          {
+            "allowTaggedTemplates": true,
+            "allowShortCircuit": true,
+            "allowTernary": true
+          }
+        ],
+        "object-curly-spacing": ["error", "always"],
+        "radix": "off"
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     }
   ]
