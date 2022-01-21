@@ -1,5 +1,5 @@
 $-icon      : 24px;
-$-item-width: 34px;
+$-item-width: 40px;
 
 .wrapper {
   display  : flex;
@@ -13,25 +13,42 @@ $-item-width: 34px;
 
     ion-searchbar {
       --box-shadow: none;
+      transform   : scale(0.8);
+
+      margin-left: -$-item-width;
     }
   }
 
   ion-grid {
-    display        : flex;
-    justify-content: flex-end;
-
     ion-col {
       width     : 80px !important;
       text-align: center;
       align-self: center;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       ion-icon {
         font-size: $-icon;
+
+        &:hover {
+          fill: var(--ion-color-light-contrast);
+
+          transition: .2s all ease-in-out;
+        }
+      }
+
+      div,
+      ion-row {
+        font-size: calc($-icon / 2);
       }
 
       ion-avatar {
         width : $-icon;
         height: $-icon;
+
+        margin: auto;
       }
     }
   }

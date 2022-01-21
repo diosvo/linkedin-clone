@@ -6,35 +6,52 @@
           <ion-icon color="primary" name="logo-linkedin"></ion-icon>
         </ion-button>
         <ion-searchbar
-          color="light"
-          class="ion-hide-lg-down"
+          color="tertiary"
+          class="ion-hide-md-down"
           placeholder="Search"
         ></ion-searchbar>
       </ion-buttons>
 
-      <ion-grid>
-        <ion-row>
+      <ion-grid class="ion-hide-md-down">
+        <ion-row class="ion-justify-content-end">
           <ion-col size="auto">
-            <ion-icon name="home-outline"></ion-icon>
+            <ion-icon color="medium" name="home"></ion-icon>
+            <div>Home</div>
           </ion-col>
           <ion-col size="auto">
-            <ion-icon name="globe-outline"></ion-icon>
+            <ion-icon color="medium" name="people"></ion-icon>
+            <div>My Network</div>
           </ion-col>
           <ion-col size="auto">
-            <ion-icon name="bag-handle-outline"></ion-icon>
+            <ion-icon color="medium" name="bag-handle"></ion-icon>
+            <div>Jobs</div>
           </ion-col>
           <ion-col size="auto">
-            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            <ion-icon color="medium" name="chatbubble-ellipses"></ion-icon>
+            <div>Message</div>
           </ion-col>
           <ion-col size="auto">
-            <ion-icon name="notifications-outline"></ion-icon>
+            <ion-icon color="medium" name="notifications"></ion-icon>
+            <ion-badge color="danger">2</ion-badge>
+            <div>Notifications</div>
           </ion-col>
           <ion-col size="auto">
             <ion-avatar>
-              <img
+              <ion-img
                 src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
-              />
+              ></ion-img>
             </ion-avatar>
+            <ion-row
+              class="ion-justify-content-center"
+              [style.margin-top.px]="4"
+            >
+              <span>Me</span>
+              <ion-icon
+                color="medium"
+                name="caret-down-outline"
+                [style.font-size.rem]="1"
+              ></ion-icon>
+            </ion-row>
           </ion-col>
         </ion-row>
       </ion-grid>
