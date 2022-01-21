@@ -9,6 +9,25 @@ import { PopoverComponent } from './popover/popover.component';
 })
 export class HeaderComponent {
 
+  menu: Array<{ name: string, icon: string }> = [
+    {
+      name: 'home',
+      icon: 'home'
+    },
+    {
+      name: 'my network',
+      icon: 'people'
+    },
+    {
+      name: 'jobs',
+      icon: 'bag-handle'
+    },
+    {
+      name: 'message',
+      icon: 'chatbubble-ellipses'
+    },
+  ]
+
   constructor(private readonly controller: PopoverController) { }
 
   async onConfig(event: Event): Promise<void> {
@@ -19,8 +38,5 @@ export class HeaderComponent {
       showBackdrop: false
     });
     (await popover).present();
-
-    const { role } = await (await popover).onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
   }
 }

@@ -14,22 +14,12 @@
 
       <ion-grid class="ion-hide-md-down">
         <ion-row class="ion-justify-content-end">
-          <ion-col size="auto">
-            <ion-icon color="medium" name="home"></ion-icon>
-            <div>Home</div>
-          </ion-col>
-          <ion-col size="auto">
-            <ion-icon color="medium" name="people"></ion-icon>
-            <div>My Network</div>
-          </ion-col>
-          <ion-col size="auto">
-            <ion-icon color="medium" name="bag-handle"></ion-icon>
-            <div>Jobs</div>
-          </ion-col>
-          <ion-col size="auto">
-            <ion-icon color="medium" name="chatbubble-ellipses"></ion-icon>
-            <div>Message</div>
-          </ion-col>
+          <ng-container *ngFor="let item of menu">
+            <ion-col size="auto">
+              <ion-icon color="medium" [name]="item.icon"></ion-icon>
+              <div>{{ item.name | titlecase }}</div>
+            </ion-col>
+          </ng-container>
           <ion-col size="auto">
             <ion-icon color="medium" name="notifications"></ion-icon>
             <ion-badge color="danger">2</ion-badge>
