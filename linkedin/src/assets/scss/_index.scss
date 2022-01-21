@@ -11,3 +11,12 @@ ion-badge {
   margin-left  : -12px;
   border-radius: 50%;
 }
+
+.config-popover {
+  --width     : 300px;
+  --box-shadow: none;
+}
+
+.divider {
+  border-bottom: 1px solid var(--ion-color-light);
+}

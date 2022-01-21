@@ -1,1 +1,53 @@
-<p>popover works!</p>
+<ion-card>
+  <ion-card-header>
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-center">
+        <ion-col size="auto">
+          <ion-avatar>
+            <ion-img
+              src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+            ></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col size="auto" [style.margin-left.px]="8">
+          <ion-card-title [style.margin-bottom.px]="4">
+            <b>Dios Vo</b>
+          </ion-card-title>
+          <ion-card-subtitle>Software Engineer</ion-card-subtitle>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button
+      size="small"
+      expand="block"
+      fill="outline"
+      color="primary"
+      class="ion-margin-top"
+    >
+      View Profile
+    </ion-button>
+  </ion-card-header>
+
+  <div class="divider"></div>
+
+  <ion-card-content>
+    <ion-card-title color="dark"><b>Account</b></ion-card-title>
+    <p class="ion-padding-top">Setting & Privacy</p>
+    <p class="ion-padding-top">Help</p>
+    <p class="ion-padding-top">Language</p>
+  </ion-card-content>
+
+  <div class="divider"></div>
+
+  <ion-card-content>
+    <ion-card-title color="dark"><b>Manage</b></ion-card-title>
+    <p class="ion-padding-top">Posts & Activities</p>
+    <p class="ion-padding-top">Job Posting Account</p>
+  </ion-card-content>
+
+  <div class="divider"></div>
+
+  <ion-card-content>
+    <p>Sign Out</p>
+  </ion-card-content>
+</ion-card>
