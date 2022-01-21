@@ -30,24 +30,21 @@
 
   <div class="divider"></div>
 
-  <ion-card-content>
-    <ion-card-title color="dark"><b>Account</b></ion-card-title>
-    <p class="ion-padding-top">Setting & Privacy</p>
-    <p class="ion-padding-top">Help</p>
-    <p class="ion-padding-top">Language</p>
-  </ion-card-content>
-
-  <div class="divider"></div>
-
-  <ion-card-content>
-    <ion-card-title color="dark"><b>Manage</b></ion-card-title>
-    <p class="ion-padding-top">Posts & Activities</p>
-    <p class="ion-padding-top">Job Posting Account</p>
-  </ion-card-content>
-
-  <div class="divider"></div>
+  <ng-container *ngFor="let action of actions | keyvalue">
+    <ion-card-content>
+      <ion-card-title color="dark">
+        <b>{{ action.key | titlecase }}</b>
+      </ion-card-title>
+      <ng-container *ngFor="let option of action.value">
+        <p class="ion-padding-top" (click)="onAction(option)">
+          {{ option | titlecase }}
+        </p>
+      </ng-container>
+    </ion-card-content>
+    <div class="divider"></div>
+  </ng-container>
 
   <ion-card-content>
-    <p>Sign Out</p>
+    <p (click)="signOut()">Sign Out</p>
   </ion-card-content>
 </ion-card>
