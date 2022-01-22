@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CreateDialogComponent } from './create-dialog/create-dialog.component';
 import { StartPostComponent } from './start-post.component';
 
@@ -9,7 +10,8 @@ import { StartPostComponent } from './start-post.component';
     CreateDialogComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [StartPostComponent]
 })

@@ -15,17 +15,21 @@
       <ion-grid class="ion-hide-md-down">
         <ion-row class="ion-justify-content-end">
           <ng-container *ngFor="let item of menu">
-            <ion-col size="auto">
+            <ion-col size="auto" class="ion-text-center">
               <ion-icon color="medium" [name]="item.icon"></ion-icon>
               <div>{{ item.name | titlecase }}</div>
             </ion-col>
           </ng-container>
-          <ion-col size="auto">
+          <ion-col size="auto" class="ion-text-center">
             <ion-icon color="medium" name="notifications"></ion-icon>
             <ion-badge color="danger">2</ion-badge>
             <div>Notifications</div>
           </ion-col>
-          <ion-col (click)="onConfig($event)" size="auto">
+          <ion-col
+            size="auto"
+            class="ion-text-center"
+            (click)="onConfig($event)"
+          >
             <ion-avatar>
               <ion-img
                 src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"

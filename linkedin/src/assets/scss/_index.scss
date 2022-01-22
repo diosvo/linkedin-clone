@@ -12,6 +12,12 @@ ion-badge {
   border-radius: 50%;
 }
 
+ion-card {
+  border-radius: 0.5rem;
+  box-shadow   : none !important;
+  border       : 1px solid var(--ion-color-tertiary-shade);
+}
+
 .config-popover {
   --box-shadow: none;
   --background: none;
@@ -20,10 +26,4 @@ ion-badge {
 
 .divider {
   border-bottom: 1px solid var(--ion-color-light);
-}
-
-.container {
-  display  : flex;
-  margin   : auto;
-  min-width: 1128px;
 }
