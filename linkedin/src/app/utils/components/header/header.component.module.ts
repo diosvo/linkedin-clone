@@ -8,7 +8,6 @@ import { PopoverComponent } from './popover/popover.component';
   declarations: [HeaderComponent, PopoverComponent],
   imports: [
     CommonModule,
-
     IonicModule,
   ],
   exports: [HeaderComponent],

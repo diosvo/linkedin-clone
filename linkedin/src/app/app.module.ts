@@ -10,8 +10,8 @@ import { HeaderModule } from './utils/components/header/header.component.module'
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
     AppRoutingModule,
+    IonicModule.forRoot(),
 
     HeaderModule
   ],
