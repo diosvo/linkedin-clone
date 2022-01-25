@@ -1,0 +1,21 @@
+$-unit: 2.5rem;
+
+ion-avatar {
+  width : $-unit;
+  height: $-unit;
+
+  ion-img {
+    width : $-unit;
+    height: $-unit;
+  }
+}
+
+ion-button {
+  --border-width: 1px;
+  width         : 100%;
+  height        : $-unit;
+
+  span.ion-text-left {
+    margin-right: auto;
+  }
+}

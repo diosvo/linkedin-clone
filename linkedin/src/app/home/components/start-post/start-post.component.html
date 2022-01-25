@@ -1,1 +1,37 @@
-<ion-card class="ion-no-margin ion-padding"> post </ion-card>
+<ion-card class="ion-no-margin">
+  <ion-card-header class="d-flex ion-align-items-center">
+    <ion-avatar>
+      <ion-img
+        alt="avatar"
+        src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+      ></ion-img>
+    </ion-avatar>
+    <ion-button class="ml-2" shape="round" fill="outline" color="medium">
+      <span class="ion-text-left ion-text-lowercase">Start a post</span>
+    </ion-button>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col *ngFor="let item of actions">
+          <div
+            class="d-flex ion-no-padding underline-hover-link"
+            (click)="onAction(item.action)"
+          >
+            <ion-icon
+              class="fs-24"
+              [color]="item.fill"
+              [name]="item.icon"
+            ></ion-icon>
+            <ion-text class="ml-2 ion-align-self-end">
+              {{ item.action | titlecase }}
+            </ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
+
+<div class="divider ion-margin-vertical"></div>
