@@ -13,7 +13,7 @@
       </ion-buttons>
 
       <ion-grid class="ion-hide-md-down">
-        <ion-row class="ion-justify-content-end">
+        <ion-row class="ion-justify-content-end fs-12">
           <ng-container *ngFor="let item of menu">
             <ion-col size="auto" class="ion-text-center">
               <ion-icon color="medium" [name]="item.icon"></ion-icon>
@@ -35,15 +35,12 @@
                 src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
               ></ion-img>
             </ion-avatar>
-            <ion-row
-              class="ion-justify-content-center"
-              [style.margin-top.px]="4"
-            >
+            <ion-row class="ion-justify-content-center mt-1">
               <span>Me</span>
               <ion-icon
+                class="fs-16"
                 color="medium"
                 name="caret-down-outline"
-                [style.font-size.rem]="1"
               ></ion-icon>
             </ion-row>
           </ion-col>

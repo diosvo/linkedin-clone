@@ -9,11 +9,11 @@
             ></ion-img>
           </ion-avatar>
         </ion-col>
-        <ion-col size="auto" [style.margin-left.px]="8">
-          <ion-card-title [style.margin-bottom.px]="4">
-            <b>Dios Vo</b>
-          </ion-card-title>
-          <ion-card-subtitle>Software Engineer</ion-card-subtitle>
+        <ion-col size="auto" class="ml-2">
+          <ion-card-title class="text-bold mb-1"> Dios Vo </ion-card-title>
+          <ion-card-subtitle>
+            Software Engineer at TMA Solutions
+          </ion-card-subtitle>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -22,7 +22,7 @@
       expand="block"
       fill="outline"
       color="primary"
-      class="ion-margin-top"
+      class="ion-margin-top ion-text-capitalize text-bold"
     >
       View Profile
     </ion-button>
@@ -32,11 +32,14 @@
 
   <ng-container *ngFor="let action of actions | keyvalue">
     <ion-card-content>
-      <ion-card-title color="dark">
-        <b>{{ action.key | titlecase }}</b>
+      <ion-card-title color="dark" class="text-bold">
+        {{ action.key | titlecase }}
       </ion-card-title>
       <ng-container *ngFor="let option of action.value">
-        <p class="ion-padding-top" (click)="onAction(option)">
+        <p
+          class="ion-padding-top underline-hover-link"
+          (click)="onAction(option)"
+        >
           {{ option | titlecase }}
         </p>
       </ng-container>
@@ -45,6 +48,6 @@
   </ng-container>
 
   <ion-card-content>
-    <p (click)="signOut()">Sign Out</p>
+    <p (click)="signOut()" class="underline-hover-link">Sign Out</p>
   </ion-card-content>
 </ion-card>

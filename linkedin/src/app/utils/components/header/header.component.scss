@@ -40,11 +40,6 @@ ion-header {
           }
         }
 
-        div,
-        ion-row {
-          font-size: calc($-icon / 2);
-        }
-
         ion-avatar {
           width : $-icon;
           height: $-icon;
