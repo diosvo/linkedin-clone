@@ -27,7 +27,9 @@ ion-header {
         width: 80px !important;
 
         &:hover {
-          cursor: pointer;
+          cursor    : pointer;
+          transition: .2s all ease-in-out;
+          color     : var(--ion-color-light-contrast);
         }
 
         ion-icon {
@@ -35,8 +37,6 @@ ion-header {
 
           &:hover {
             fill: var(--ion-color-light-contrast);
-
-            transition: .2s all ease-in-out;
           }
         }
 

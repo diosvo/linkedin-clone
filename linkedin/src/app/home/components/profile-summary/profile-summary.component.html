@@ -1,1 +1,56 @@
-<ion-card class="ion-no-margin ion-padding"> profile </ion-card>
+<ion-card class="ion-no-margin ion-no-padding">
+  <ion-card-header>
+    <div class="wallpaper">
+      <div class="background">
+        <ion-img
+          alt="wallpaper"
+          src="https://images3.alphacoders.com/108/1085524.png"
+        ></ion-img>
+        <div class="layer"></div>
+      </div>
+      <div class="avatar">
+        <ion-avatar>
+          <ion-img
+            alt="avatar"
+            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+          ></ion-img>
+        </ion-avatar>
+      </div>
+    </div>
+
+    <div class="ion-text-center information">
+      <ion-card-title [style.margin-bottom.px]="4">
+        <b>Dios Vo</b>
+      </ion-card-title>
+      <ion-card-subtitle>
+        Software Engineer at TMA Solutions
+      </ion-card-subtitle>
+    </div>
+  </ion-card-header>
+
+  <div class="divider"></div>
+  <ion-card-content [style.font-size.px]="12">
+    <div
+      [style.display]="'flex'"
+      class="ion-justify-content-between ion-margin-bottom"
+    >
+      <div>
+        <ion-text><b>Collection</b></ion-text>
+        <div><ion-text color="dark">Grow your network</ion-text></div>
+      </div>
+      <ion-text color="primary">26</ion-text>
+    </div>
+    <div [style.display]="'flex'" class="ion-justify-content-between">
+      <ion-text><b>Invitations</b></ion-text>
+      <ion-text color="primary">12</ion-text>
+    </div>
+  </ion-card-content>
+
+  <div class="divider"></div>
+  <ion-card-content [style.font-size.px]="12">
+    <div [style.display]="'flex'" class="ion-align-items-center">
+      <ion-icon name="bookmark" [style.margin-right.px]="4"></ion-icon>
+      <ion-text color="dark"><b>My items</b></ion-text>
+    </div>
+  </ion-card-content>
+</ion-card>

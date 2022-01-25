@@ -1,0 +1,39 @@
+$-image-height: 8rem;
+
+.wallpaper {
+  margin: -1rem;
+
+  .background {
+    height: $-image-height;
+
+    ion-img {
+      height    : calc($-image-height / 2);
+      object-fit: cover;
+    }
+  }
+
+  .avatar ion-avatar {
+    position : absolute;
+    left     : 50%;
+    transform: translate(-50%, -150%);
+
+    border: 2px solid var(--ion-color-primary-contrast);
+  }
+}
+
+.information {
+  ion-card {
+    &-title {
+      font-size: 1rem;
+
+      &:hover {
+        cursor         : pointer;
+        text-decoration: underline;
+      }
+    }
+
+    &-subtitle {
+      font-size: 0.75rem;
+    }
+  }
+}
