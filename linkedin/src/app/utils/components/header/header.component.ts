@@ -30,11 +30,10 @@ export class HeaderComponent {
 
   constructor(private readonly controller: PopoverController) { }
 
-  async onConfig(event: Event): Promise<void> {
+  async onConfig(): Promise<void> {
     const popover = this.controller.create({
       component: PopoverComponent,
       cssClass: 'config-popover',
-      event,
       showBackdrop: false
     });
     (await popover).present();

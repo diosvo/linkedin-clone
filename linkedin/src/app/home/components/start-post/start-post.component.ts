@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { CreateDialogComponent } from './create-dialog/create-dialog.component';
 
 @Component({
   selector: 'app-start-post',
@@ -30,7 +32,14 @@ export class StartPostComponent {
     }
   ]
 
-  constructor() { }
+  constructor(private readonly controller: ModalController) { }
+
+  async openDialog(): Promise<void> {
+    const modal = await this.controller.create({
+      component: CreateDialogComponent
+    });
+    (await modal).present();
+  }
 
   onAction(action: string): void {
     switch (action) {

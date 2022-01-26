@@ -28,6 +28,10 @@ ion-card {
   }
 }
 
+ion-button {
+  text-transform: capitalize;
+}
+
 .config-popover {
   --box-shadow: none;
   --background: none;

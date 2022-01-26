@@ -6,25 +6,26 @@
         src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
       ></ion-img>
     </ion-avatar>
-    <ion-button class="ml-2" shape="round" fill="outline" color="medium">
+    <ion-button
+      class="ml-2"
+      shape="round"
+      fill="outline"
+      color="medium"
+      (click)="openDialog()"
+    >
       <span class="ion-text-left ion-text-lowercase">Start a post</span>
     </ion-button>
   </ion-card-header>
 
   <ion-card-content class="d-flex ion-justify-content-between">
     <ng-container *ngFor="let item of actions">
-      <ion-button
-        fill="clear"
-        color="medium"
-        class="ion-text-capitalize"
-        (click)="onAction(item.action)"
-      >
+      <ion-button fill="clear" color="medium" (click)="onAction(item.action)">
         <ion-icon
           class="fs-20"
           [color]="item.fill"
           [name]="item.icon"
         ></ion-icon>
-        <ion-text class="ml-2">{{ item.action }}</ion-text>
+        <ion-text class="ml-2">{{ item.action | titlecase }}</ion-text>
       </ion-button>
     </ng-container>
   </ion-card-content>
