@@ -11,26 +11,22 @@
     </ion-button>
   </ion-card-header>
 
-  <ion-card-content>
-    <ion-grid class="ion-no-padding">
-      <ion-row>
-        <ion-col *ngFor="let item of actions">
-          <div
-            class="d-flex ion-no-padding underline-hover-link"
-            (click)="onAction(item.action)"
-          >
-            <ion-icon
-              class="fs-24"
-              [color]="item.fill"
-              [name]="item.icon"
-            ></ion-icon>
-            <ion-text class="ml-2 ion-align-self-end">
-              {{ item.action | titlecase }}
-            </ion-text>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card-content class="d-flex ion-justify-content-between">
+    <ng-container *ngFor="let item of actions">
+      <ion-button
+        fill="clear"
+        color="medium"
+        class="ion-text-capitalize"
+        (click)="onAction(item.action)"
+      >
+        <ion-icon
+          class="fs-20"
+          [color]="item.fill"
+          [name]="item.icon"
+        ></ion-icon>
+        <ion-text class="ml-2">{{ item.action }}</ion-text>
+      </ion-button>
+    </ng-container>
   </ion-card-content>
 </ion-card>
 
