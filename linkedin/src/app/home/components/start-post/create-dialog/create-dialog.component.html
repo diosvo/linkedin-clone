@@ -1,11 +1,40 @@
 <div>
-  <h4 class="ion-margin">Create a post</h4>
-  <div class="divider"></div>
-  <div class="ion-padding">
-    <ion-item>
-      <ion-textarea
-        placeholder="What do you want to talk about?"
-      ></ion-textarea>
-    </ion-item>
+  <div class="d-flex ion-justify-content-between ion-align-items-center">
+    <h4 class="ion-margin">Create a post</h4>
+    <ion-button size="small" color="dark" fill="clear" shape="round">
+      <ion-icon slot="icon-only" size="large" name="close-outline"></ion-icon>
+    </ion-button>
   </div>
+
+  <div class="divider"></div>
+
+  <ion-grid class="ion-padding">
+    <ion-row class="ion-align-items-start">
+      <ion-col size="auto">
+        <ion-avatar>
+          <ion-img
+            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+          ></ion-img>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="auto" class="ml-1">
+        <ion-text class="d-block text-bold mb-1"> Dios Vo </ion-text>
+        <ion-button
+          size="small"
+          shape="round"
+          fill="outline"
+          color="medium"
+          class="privacy"
+        >
+          <ion-icon color="dark" name="globe-outline" class="fs-14"></ion-icon>
+          <ion-text class="mx-1">Public</ion-text>
+          <ion-icon
+            color="dark"
+            class="fs-14"
+            name="caret-down-outline"
+          ></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </div>

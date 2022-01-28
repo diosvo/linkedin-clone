@@ -36,7 +36,8 @@ export class StartPostComponent {
 
   async openDialog(): Promise<void> {
     const modal = await this.controller.create({
-      component: CreateDialogComponent
+      component: CreateDialogComponent,
+      cssClass: 'create-post-dialog'
     });
     (await modal).present();
   }
