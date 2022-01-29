@@ -29,7 +29,13 @@ ion-card {
 }
 
 ion-button {
-  text-transform: capitalize;
+  --border-width: 1px;
+  text-transform: initial;
+
+  &:hover {
+    --border-width: 2px !important;
+    --transition  : 167ms all cubic-bezier(.4, 0, .2, 1);
+  }
 }
 
 .config-popover {
@@ -40,9 +46,13 @@ ion-button {
 
 .create-post-dialog {
   --width : 600px;
-  --height: 400px;
+  --height: 385px;
 }
 
 .divider {
   border-bottom: 1px solid var(--ion-color-tertiary-shade);
+
+  &-vertical {
+    border-right: 1px solid var(--ion-color-tertiary-shade);
+  }
 }

@@ -4,13 +4,3 @@ ion-avatar {
 
   margin: auto;
 }
-
-ion-button {
-  --border-width : 1px;
-  --border-radius: 1rem;
-
-  &:hover {
-    --border-width: 2px;
-    transition    : .2s all ease-in-out;
-  }
-}

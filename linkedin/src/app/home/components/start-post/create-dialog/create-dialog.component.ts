@@ -6,6 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-dialog.component.scss']
 })
 export class CreateDialogComponent implements OnInit {
+  options: Array<{ icon: string }> = [
+    {
+      icon: 'images-outline'
+    },
+    {
+      icon: 'logo-youtube'
+    },
+    {
+      icon: 'document-outline'
+    },
+    {
+      icon: 'bag-handle-outline'
+    },
+    {
+      icon: 'bar-chart-outline'
+    },
+  ]
 
   constructor() { }
 

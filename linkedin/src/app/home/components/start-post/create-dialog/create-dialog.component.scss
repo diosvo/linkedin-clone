@@ -1,10 +1,11 @@
-$-unit: 3.5rem;
+$-unit: 3rem;
 
 ion-avatar {
   width : $-unit;
   height: $-unit;
 }
 
-ion-button.privacy {
-  --border-width: 1px;
+.post-button {
+  --padding-top   : 1rem;
+  --padding-bottom: 1rem;
 }

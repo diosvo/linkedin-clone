@@ -1,8 +1,10 @@
 <div>
-  <div class="d-flex ion-justify-content-between ion-align-items-center">
-    <h4 class="ion-margin">Create a post</h4>
-    <ion-button size="small" color="dark" fill="clear" shape="round">
-      <ion-icon slot="icon-only" size="large" name="close-outline"></ion-icon>
+  <div
+    class="d-flex ion-justify-content-between ion-align-items-center ion-margin-horizontal"
+  >
+    <h4 class="ion-margin-vertical">Create a post</h4>
+    <ion-button size="small" color="medium" fill="clear" shape="round">
+      <ion-icon slot="icon-only" size="medium" name="close-outline"></ion-icon>
     </ion-button>
   </div>
 
@@ -17,15 +19,9 @@
           ></ion-img>
         </ion-avatar>
       </ion-col>
-      <ion-col size="auto" class="ml-1">
-        <ion-text class="d-block text-bold mb-1"> Dios Vo </ion-text>
-        <ion-button
-          size="small"
-          shape="round"
-          fill="outline"
-          color="medium"
-          class="privacy"
-        >
+      <ion-col size="auto" class="ion-no-padding">
+        <ion-text class="d-block text-bold"> Dios Vo </ion-text>
+        <ion-button size="small" shape="round" fill="outline" color="medium">
           <ion-icon color="dark" name="globe-outline" class="fs-14"></ion-icon>
           <ion-text class="mx-1">Public</ion-text>
           <ion-icon
@@ -37,4 +33,43 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <form class="ion-padding-horizontal">
+    <ion-textarea
+      rows="5"
+      required
+      type="text"
+      name="body"
+      placeholder="What do you want to talk about?"
+    ></ion-textarea>
+    <ion-button fill="clear" class="text-bold">Add hashtag</ion-button>
+    <div
+      class="d-flex ion-justify-content-between ion-align-items-center ion-margin-vertical"
+    >
+      <div class="d-flex">
+        <ng-container *ngFor="let item of options">
+          <ion-button size="small" shape="round" fill="clear" color="medium">
+            <ion-icon
+              class="ion-padding-none"
+              size="icon-only"
+              [name]="item.icon"
+            ></ion-icon>
+          </ion-button>
+        </ng-container>
+        <div class="divider-vertical mx-1"></div>
+        <ion-button size="small" shape="round" fill="clear" color="medium">
+          <ion-icon color="dark" name="chatbubble-ellipses-outline"></ion-icon>
+          <ion-text class="ml-1">Anyone</ion-text>
+        </ion-button>
+      </div>
+      <ion-button
+        size="small"
+        shape="round"
+        color="primary"
+        class="text-bold post-button"
+      >
+        Post
+      </ion-button>
+    </div>
+  </form>
 </div>
