@@ -3,7 +3,13 @@
     class="d-flex ion-justify-content-between ion-align-items-center ion-margin-horizontal"
   >
     <h4 class="ion-margin-vertical">Create a post</h4>
-    <ion-button size="small" color="medium" fill="clear" shape="round">
+    <ion-button
+      size="small"
+      shape="round"
+      fill="clear"
+      color="medium"
+      (click)="onDismiss()"
+    >
       <ion-icon slot="icon-only" size="medium" name="close-outline"></ion-icon>
     </ion-button>
   </div>
@@ -34,12 +40,14 @@
     </ion-row>
   </ion-grid>
 
+  <!-- Text area -->
   <form class="ion-padding-horizontal">
     <ion-textarea
       rows="5"
       required
       type="text"
       name="body"
+      [formControl]="text_string"
       placeholder="What do you want to talk about?"
     ></ion-textarea>
     <ion-button fill="clear" class="text-bold">Add hashtag</ion-button>
@@ -66,7 +74,9 @@
         size="small"
         shape="round"
         color="primary"
+        (click)="onPost()"
         class="text-bold post-button"
+        [disabled]="!text_string.valid"
       >
         Post
       </ion-button>

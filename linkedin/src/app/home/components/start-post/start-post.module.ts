@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CreateDialogComponent } from './create-dialog/create-dialog.component';
 import { StartPostComponent } from './start-post.component';
@@ -11,7 +12,9 @@ import { StartPostComponent } from './start-post.component';
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+
+    ReactiveFormsModule
   ],
   exports: [StartPostComponent]
 })

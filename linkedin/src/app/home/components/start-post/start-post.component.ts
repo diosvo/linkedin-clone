@@ -40,6 +40,10 @@ export class StartPostComponent {
       cssClass: 'create-post-dialog'
     });
     (await modal).present();
+
+    const { data } = await modal.onDidDismiss();
+
+    console.log(data);
   }
 
   onAction(action: string): void {

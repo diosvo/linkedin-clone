@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { ModalController } from '@ionic/angular';
+import { BasicRequestAPI, EMethod } from 'src/app/utils/models/role_controller';
 
 @Component({
   selector: 'app-create-dialog',
   templateUrl: './create-dialog.component.html',
   styleUrls: ['./create-dialog.component.scss']
 })
-export class CreateDialogComponent implements OnInit {
+export class CreateDialogComponent {
   options: Array<{ icon: string }> = [
     {
       icon: 'images-outline'
@@ -22,11 +25,17 @@ export class CreateDialogComponent implements OnInit {
     {
       icon: 'bar-chart-outline'
     },
-  ]
+  ];
 
-  constructor() { }
+  text_string = new FormControl('', Validators.required);
 
-  ngOnInit(): void {
+  constructor(private readonly controller: ModalController) { }
+
+  onPost(): void {
+    this.controller.dismiss(BasicRequestAPI(this.text_string.value, EMethod.POST));
   }
 
+  onDismiss(): void {
+    this.controller.dismiss(null);
+  }
 }
