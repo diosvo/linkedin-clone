@@ -9,7 +9,7 @@
     "test": "jest",
     "jest:cache": "jest --clearCache",
     "test:co": "jest --coverage --silent",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
     "e2e": "ng e2e"
   },
   "private": true,

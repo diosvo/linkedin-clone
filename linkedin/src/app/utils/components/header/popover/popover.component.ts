@@ -10,14 +10,14 @@ export class PopoverComponent {
   actions: { [key: string]: Array<string> } = {
     account: ['setting & privacy', 'help', 'language'],
     manage: ['posts & activities', 'job posting account']
-  }
+  };
 
   constructor() { }
 
   onAction(action: string): void {
     switch (action) {
       case 'setting & privacy': {
-        this.signOut()
+        this.signOut();
       }
     }
   }

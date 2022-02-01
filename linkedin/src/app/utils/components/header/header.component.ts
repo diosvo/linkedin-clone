@@ -26,7 +26,7 @@ export class HeaderComponent {
       name: 'message',
       icon: 'chatbubble-ellipses'
     },
-  ]
+  ];
 
   constructor(private readonly controller: PopoverController) { }
 

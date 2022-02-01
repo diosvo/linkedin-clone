@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["nestjs", "typeorm"]
+  "cSpell.words": ["nestjs", "typeorm"],
+  "eslint.workingDirectories": ["src"]
 }

@@ -26,7 +26,7 @@ function BasicRequestAPI(body: unknown, role: TMethod): { [role: string]: IReque
       body,
       createdAt: new Date()
     }
-  }
+  };
 }
 
 export { EMethod, TMethod, BasicRequestAPI };

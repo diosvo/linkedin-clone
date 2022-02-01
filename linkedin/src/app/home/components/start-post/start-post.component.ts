@@ -30,7 +30,7 @@ export class StartPostComponent {
       fill: 'danger',
       action: 'write article'
     }
-  ]
+  ];
 
   constructor(private readonly controller: ModalController) { }
 
