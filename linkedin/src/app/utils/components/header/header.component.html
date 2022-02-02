@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="wrapper">
+      <ion-buttons slot="start" class="ion-no-padding">
+        <ion-button>
+          <ion-icon color="primary" name="logo-linkedin"></ion-icon>
+        </ion-button>
+        <ion-searchbar
+          color="tertiary"
+          class="ion-hide-md-down"
+          placeholder="Search"
+        ></ion-searchbar>
+      </ion-buttons>
+
+      <ion-grid class="ion-hide-md-down">
+        <ion-row class="ion-justify-content-end fs-12">
+          <ng-container *ngFor="let item of menu">
+            <ion-col size="auto" class="ion-text-center">
+              <ion-icon color="medium" [name]="item.icon"></ion-icon>
+              <div>{{ item.name | titlecase }}</div>
+            </ion-col>
+          </ng-container>
+          <ion-col size="auto" class="ion-text-center">
+            <ion-icon color="medium" name="notifications"></ion-icon>
+            <ion-badge color="danger">2</ion-badge>
+            <div>Notifications</div>
+          </ion-col>
+          <ion-col size="auto" class="ion-text-center" (click)="onConfig()">
+            <ion-avatar>
+              <ion-img
+                src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+              ></ion-img>
+            </ion-avatar>
+            <ion-row class="ion-justify-content-center mt-1">
+              <span>Me</span>
+              <ion-icon
+                class="fs-16"
+                color="medium"
+                name="caret-down-outline"
+              ></ion-icon>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-toolbar>
+</ion-header>

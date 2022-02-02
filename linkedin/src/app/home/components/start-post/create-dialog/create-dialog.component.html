@@ -1,0 +1,85 @@
+<div>
+  <div
+    class="d-flex ion-justify-content-between ion-align-items-center ion-margin-horizontal"
+  >
+    <h4 class="ion-margin-vertical">Create a post</h4>
+    <ion-button
+      size="small"
+      shape="round"
+      fill="clear"
+      color="medium"
+      (click)="onDismiss()"
+    >
+      <ion-icon slot="icon-only" size="medium" name="close-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="divider"></div>
+
+  <ion-grid class="ion-padding">
+    <ion-row class="ion-align-items-start">
+      <ion-col size="auto">
+        <ion-avatar>
+          <ion-img
+            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+          ></ion-img>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="auto" class="ion-no-padding">
+        <ion-text class="d-block text-bold"> Dios Vo </ion-text>
+        <ion-button size="small" shape="round" fill="outline" color="medium">
+          <ion-icon color="dark" name="globe-outline" class="fs-14"></ion-icon>
+          <ion-text class="mx-1">Public</ion-text>
+          <ion-icon
+            color="dark"
+            class="fs-14"
+            name="caret-down-outline"
+          ></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Text area -->
+  <form class="ion-padding-horizontal">
+    <ion-textarea
+      rows="5"
+      required
+      type="text"
+      name="body"
+      [formControl]="text_string"
+      placeholder="What do you want to talk about?"
+    ></ion-textarea>
+    <ion-button fill="clear" class="text-bold">Add hashtag</ion-button>
+    <div
+      class="d-flex ion-justify-content-between ion-align-items-center ion-margin-vertical"
+    >
+      <div class="d-flex">
+        <ng-container *ngFor="let item of options">
+          <ion-button size="small" shape="round" fill="clear" color="medium">
+            <ion-icon
+              class="ion-padding-none"
+              size="icon-only"
+              [name]="item.icon"
+            ></ion-icon>
+          </ion-button>
+        </ng-container>
+        <div class="divider-vertical mx-1"></div>
+        <ion-button size="small" shape="round" fill="clear" color="medium">
+          <ion-icon color="dark" name="chatbubble-ellipses-outline"></ion-icon>
+          <ion-text class="ml-1">Anyone</ion-text>
+        </ion-button>
+      </div>
+      <ion-button
+        size="small"
+        shape="round"
+        color="primary"
+        (click)="onPost()"
+        class="text-bold post-button"
+        [disabled]="!text_string.valid"
+      >
+        Post
+      </ion-button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,84 @@
+/* font-size */
+
+.fs {
+  &-12 {
+    font-size: 12px;
+  }
+
+  &-14 {
+    font-size: 14px;
+  }
+
+  &-16 {
+    font-size: 16px !important;
+  }
+
+  &-24 {
+    font-size: 24px;
+  }
+}
+
+/* text-transformation */
+
+.text {
+  &-bold {
+    font-weight: bold !important;
+  }
+}
+
+/* hover */
+
+.underline-hover-link:hover {
+  cursor         : pointer;
+  text-decoration: underline;
+}
+
+/* spacing */
+
+.d {
+  &-flex {
+    display: flex;
+  }
+
+  &-block {
+    display: block;
+  }
+}
+
+.m {
+  $-px: 4px;
+
+  &t {
+    &-1 {
+      margin-top: $-px;
+    }
+  }
+
+  &r {
+    &-1 {
+      margin-right: $-px;
+    }
+  }
+
+  &b {
+    &-1 {
+      margin-bottom: $-px;
+    }
+  }
+
+  &l {
+    &-1 {
+      margin-left: $-px;
+    }
+
+    &-2 {
+      margin-left: calc($-px *2);
+    }
+  }
+
+  &x {
+    &-1 {
+      margin-inline: $-px;
+    }
+  }
+}

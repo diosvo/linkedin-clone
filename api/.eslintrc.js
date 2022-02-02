@@ -16,9 +16,38 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
-    '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-  },
+    '@angular-eslint/directive-selector': [
+      'error',
+      {
+        type: 'attribute',
+        style: 'kebab-case',
+      },
+    ],
+    '@angular-eslint/component-selector': [
+      'error',
+      {
+        type: 'element',
+        style: 'kebab-case',
+      },
+    ],
+    eqeqeq: ['error', 'smart'],
+    semi: ['error', 'always'],
+    quotes: ['error', 'single'],
+    'dot-notation': 'off',
+    'id-blacklist': 'off',
+    'id-match': 'off',
+    'no-empty-function': 'off',
+    'no-magic-numbers': 'off',
+    'no-underscore-dangle': 'off',
+    'no-unused-expressions': [
+      'error',
+      {
+        allowTaggedTemplates: true,
+        allowShortCircuit: true,
+        allowTernary: true,
+      },
+    ],
+    'object-curly-spacing': ['error', 'always'],
+    radix: 'off',
+  }
 };

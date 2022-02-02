@@ -1,0 +1,11 @@
+$-unit: 3rem;
+
+ion-avatar {
+  width : $-unit;
+  height: $-unit;
+}
+
+.post-button {
+  --padding-top   : 1rem;
+  --padding-bottom: 1rem;
+}
